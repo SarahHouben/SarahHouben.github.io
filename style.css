@@ -71,8 +71,10 @@ h1 {
 
   color: black;
 
-  background-image: none;
-  background-color: RGBA(197, 197, 206, 0.5);
+  /* background-image: none; */
+  /* background-color: RGBA(197, 197, 206, 0.5); */
+  background-color: #f0e3e6;
+  background-color: RGBA(240, 227, 230, 0.7);
 }
 
 .box__inner--enter {
@@ -88,6 +90,7 @@ h1 {
   position: relative;
   right: 10px;
   color: #f8f8fd;
+  text-shadow: -1px -1px 4px #9a8c8f;
 }
 
 .box-header--active {
@@ -98,14 +101,6 @@ h1 {
 /* #################################            INDIVIDUAL BOXES           ############################################*/
 
 .contact-box {
-  /* background-image: url("/assets/Antelope_Canyon.jpg"); */
-  /* background-image: url("/assets/Detail\ of\ a\ Northern\ Red\ Snapper\ Lutjanus\ campechanus.jpg"); */
-  /* background-image: linear-gradient(
-      to bottom,
-      RGBA(254, 225, 64, 0.3),
-      RGBA(250, 112, 154, 0.5)
-    ), */
-
   background-image: linear-gradient(
       to bottom,
       RGBA(255, 106, 136, 0.1),
@@ -117,13 +112,6 @@ h1 {
 }
 
 .portfolio-box {
-  /* background-image: url("/assets/Scales_of_a_Blue_morpho_butterfly_Morpho_peleides.jpg"); */
-  /* background-image: linear-gradient(
-      to bottom,
-      RGBA(251, 171, 126, 0.3),
-      RGBA(200, 80, 192, 0.2)
-    ),
-    url("/assets/Reforestation_of_the_Whisby_Nature_Reserve_UK_with_birch_woodland.jpg"); */
   background-image: linear-gradient(
       to bottom,
       RGBA(255, 106, 136, 0.1),
@@ -136,7 +124,6 @@ h1 {
 }
 
 .about-box {
-  /* background-image: url("/assets/Iridescent_feathers_on_a_Feral_Pigeon_Columbia_livia_domestica.jpg"); */
   background-image: linear-gradient(
       to bottom,
       RGBA(255, 106, 136, 0.1),
