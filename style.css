@@ -36,6 +36,26 @@ h1 {
   flex: 1;
   transition-duration: 1s;
 }
+.box--side {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+.box__header::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  border-left: 1px solid #f8f8fd;
+  left: 0;
+  top: 0;
+  transition: height 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.box--side:hover .box__header::after {
+  height: 100%;
+}
 
 .box__inner {
   position: absolute;
@@ -52,7 +72,7 @@ h1 {
   color: black;
 
   background-image: none;
-  background-color: #f8f8fd;
+  background-color: RGBA(197, 197, 206, 0.5);
 }
 
 .box__inner--enter {
@@ -64,35 +84,67 @@ h1 {
   flex: 8;
 }
 
-.box-header {
-  /* USE THIS CLASS TO POSITION THE HEADER */
-
-  /* color: #f8f8fd; */
-  color: pink;
+.box__header {
+  position: relative;
+  right: 10px;
+  color: #f8f8fd;
 }
 
 .box-header--active {
-  /* opacity: 0; */
-  /* border: 4px solid black; */
-  font-size: 2rem;
+  transition-delay: 0.9s;
+  opacity: 0;
 }
 
 /* #################################            INDIVIDUAL BOXES           ############################################*/
 
 .contact-box {
   /* background-image: url("/assets/Antelope_Canyon.jpg"); */
-  background-image: url("/assets/Detail\ of\ a\ Northern\ Red\ Snapper\ Lutjanus\ campechanus.jpg");
+  /* background-image: url("/assets/Detail\ of\ a\ Northern\ Red\ Snapper\ Lutjanus\ campechanus.jpg"); */
+  /* background-image: linear-gradient(
+      to bottom,
+      RGBA(254, 225, 64, 0.3),
+      RGBA(250, 112, 154, 0.5)
+    ), */
+
+  background-image: linear-gradient(
+      to bottom,
+      RGBA(255, 106, 136, 0.1),
+      RGBA(255, 153, 172, 0.1)
+    ),
+    url("/assets/Peak_District_National_Park_UK.jpg");
   background-size: cover;
+  background-position: center center;
 }
 
 .portfolio-box {
-  background-image: url("/assets/Scales_of_a_Blue_morpho_butterfly_Morpho_peleides.jpg");
+  /* background-image: url("/assets/Scales_of_a_Blue_morpho_butterfly_Morpho_peleides.jpg"); */
+  /* background-image: linear-gradient(
+      to bottom,
+      RGBA(251, 171, 126, 0.3),
+      RGBA(200, 80, 192, 0.2)
+    ),
+    url("/assets/Reforestation_of_the_Whisby_Nature_Reserve_UK_with_birch_woodland.jpg"); */
+  background-image: linear-gradient(
+      to bottom,
+      RGBA(255, 106, 136, 0.1),
+      RGBA(255, 153, 172, 0.1)
+    ),
+    url("/assets/Trees_at_Peak_District_National_Park_UK.jpg");
+
   background-size: cover;
+  background-position: center center;
 }
 
 .about-box {
-  background-image: url("/assets/Iridescent_feathers_on_a_Feral_Pigeon_Columbia_livia_domestica.jpg");
+  /* background-image: url("/assets/Iridescent_feathers_on_a_Feral_Pigeon_Columbia_livia_domestica.jpg"); */
+  background-image: linear-gradient(
+      to bottom,
+      RGBA(255, 106, 136, 0.1),
+      RGBA(255, 153, 172, 0.1)
+    ),
+    url("/assets/Arches_National_Park.jpg");
   background-size: cover;
+  background-position: center center;
 }
 
 .logo-box {
