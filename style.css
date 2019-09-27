@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif, Helvetica, Arial, sans-serif;
+  font-size: 16.5px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+/* #################################            CONTAINER DIV           ############################################*/
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* #################################            BOX  DIVS         ############################################*/
+.box {
+  height: 100vh;
+  color: #f8f8fd;
+  position: relative;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+  transition-duration: 1s;
+}
+
+.box__inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  writing-mode: horizontal-tb;
+  text-orientation: upright;
+
+  color: black;
+
+  background-image: none;
+  background-color: #f8f8fd;
+}
+
+.box__inner--enter {
+  transition-delay: 1s;
+  opacity: 1;
+}
+
+.box--active {
+  flex: 8;
+}
+
+.box-header {
+  /* USE THIS CLASS TO POSITION THE HEADER */
+
+  /* color: #f8f8fd; */
+  color: pink;
+}
+
+.box-header--active {
+  /* opacity: 0; */
+  /* border: 4px solid black; */
+  font-size: 2rem;
+}
+
+/* #################################            INDIVIDUAL BOXES           ############################################*/
+
+.contact-box {
+  /* background-image: url("/assets/Antelope_Canyon.jpg"); */
+  background-image: url("/assets/Detail\ of\ a\ Northern\ Red\ Snapper\ Lutjanus\ campechanus.jpg");
+  background-size: cover;
+}
+
+.portfolio-box {
+  background-image: url("/assets/Scales_of_a_Blue_morpho_butterfly_Morpho_peleides.jpg");
+  background-size: cover;
+}
+
+.about-box {
+  background-image: url("/assets/Iridescent_feathers_on_a_Feral_Pigeon_Columbia_livia_domestica.jpg");
+  background-size: cover;
+}
+
+.logo-box {
+  background-color: black;
+  flex: 8;
+}
+
+.logo-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo-png {
+  height: 100px;
+  width: auto;
+}
+
+.logo-subtitle {
+  writing-mode: horizontal-tb;
+  text-orientation: upright;
+  text-align: center;
+  margin-top: -10px;
+}
+
+/*Responsive design for different media*/
+/* these would be measurements for smartphones*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    height: 100vh;
+  }
+}
