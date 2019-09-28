@@ -13,6 +13,28 @@ h1 {
   font-size: 1.1rem;
 }
 
+h2 {
+  font-size: 0.9rem;
+  font-family: "Cutive Mono", monospace;
+  text-align: center;
+  font-weight: 300;
+  color: #111010;
+  font-size: 1.1rem;
+  padding-top: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #111010;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /* #################################            CONTAINER DIV           ############################################*/
 
 .container {
@@ -165,7 +187,6 @@ h1 {
   font-weight: 300;
   color: #111010;
   font-size: 1.3rem;
-  /* padding-bottom: 1em; */
   padding-top: 1em;
 }
 
@@ -239,11 +260,116 @@ li {
   font-weight: 400;
 }
 
+.portrait-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 100%;
+}
+
 .portrait-img {
   height: 24vh;
   width: auto;
   border-radius: 50%;
   max-width: 280px;
+}
+
+.github-logo {
+  padding: 10px 0;
+}
+
+/* #################################            PORTFOLIO INNER BOX           ############################################*/
+
+.proj-sec {
+  padding-top: 1rem;
+}
+
+.proj-link-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 1em;
+}
+
+.inner_text-2nd {
+  padding: 0.4em 20px 0 20px;
+  text-align: center;
+}
+
+/* .proj-sec a {
+  text-decoration: none;
+  color: #111010;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+} */
+
+/* .proj-sec a:hover {
+  text-decoration: underline;
+} */
+
+.portfolio-logo {
+  height: 25px;
+  width: auto;
+  padding-right: 5px;
+}
+
+/* #################################            CONTACT INNER BOX           ############################################*/
+
+.form-div {
+  width: 100%;
+  padding: 2em 0;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-input {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: solid 1px #d1d1d1;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  width: 75%;
+  max-width: 720px;
+  margin: auto;
+  padding: 10px;
+}
+
+label {
+  color: #2e2e2e;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  padding: 1em 0 0.6em 0;
+  width: 75%;
+  max-width: 720px;
+}
+
+.submit-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.submit-input {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: solid 1px #bbbbbb;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  padding: 3px 10px;
+  color: #bbbbbb;
+  cursor: pointer;
+}
+
+.submit-input:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #2e2e2e;
+  border: solid 1px #2e2e2e;
 }
 
 /*Responsive design for different media*/

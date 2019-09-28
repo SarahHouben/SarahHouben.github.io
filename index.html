@@ -90,7 +90,50 @@
         <h1 class="box__header">Contact</h1>
         <div class="box__inner">
           <h1 class="inner__header">Contact</h1>
-          <p>Contact Info</p>
+
+          <div class="form-div">
+          <form
+            action="https://formspree.io/mail@sarahhouben.com"
+            method="POST"
+            class="flex-col"
+          >
+            <label for="email">Email</label>
+            <input
+              class="form-input"
+              type="text"
+              name="email"
+              id=""
+              placeholder="abc@email.com"
+            />
+            <label for="message">Your message</label>
+            <textarea
+              class="form-input"
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your message"
+            ></textarea>
+            <div class="submit-div">
+              <input
+                class="submit-input"
+                id="contact-submit"
+                type="submit"
+                value="Submit"
+              />
+            </div>
+          </form>
+        </div>
+
+          <a href="https://www.linkedin.com/in/sarahhouben/" target="_blank">
+            <img
+              class="portfolio-logo"
+              src="/assets/icons/linkedin-icon.svg"
+              alt="LinkedIn Logo"
+            />
+            Or connect with me on LinkedIn
+          </a>
+    
         </div>
       </div>
 
@@ -98,7 +141,104 @@
         <h1 class="box__header">Portfolio</h1>
         <div class="box__inner">
           <h1 class="inner__header">Portfolio</h1>
-          <p>Project Info</p>
+
+          <section class="proj-sec">
+            <h2 class="inner__sub-header">Restaurant App</h2>
+            <p class="inner_text">
+              Web app which allows users to explore & pin “green spaces” in
+              their local area.
+            </p>
+            <p class="inner_text-2nd">
+              Built with Node.js, Express.js, Passport.js, MongoDB, Mongoose
+              ODM, Google Maps & SASS.
+            </p>
+            <div class="proj-link-div">
+              <a href="" target="_blank">
+                <img
+                  class="portfolio-logo"
+                  src="/assets/icons/homepage-icon.svg"
+                  alt="Website Logo"
+                />
+                View the Project
+              </a>
+              <a href="" target="_blank">
+                <img
+                  class="portfolio-logo"
+                  src="/assets/icons/github-icon.svg"
+                  alt="Github Logo"
+                />
+                View the Source
+              </a>
+            </div>
+          </section>
+
+          <section class="proj-sec">
+            <h2 class="inner__sub-header">GreenSpace Berlin</h2>
+            <p class="inner_text">
+              Web app which allows users to explore & pin “green spaces” in
+              their local area.
+            </p>
+            <p class="inner_text-2nd">
+              Built with Node.js, Express.js, Passport.js, MongoDB, Mongoose
+              ODM, Google Maps & SASS.
+            </p>
+            <div class="proj-link-div">
+              <a href="https://greenspaceberlin.herokuapp.com/" target="_blank">
+                <img
+                  class="portfolio-logo"
+                  src="/assets/icons/homepage-icon.svg"
+                  alt="Website Logo"
+                />
+                View the Project
+              </a>
+              <a
+                href="https://github.com/SarahHouben/GreenSpace"
+                target="_blank"
+              >
+                <img
+                  class="portfolio-logo"
+                  src="/assets/icons/github-icon.svg"
+                  alt="Github Logo"
+                />
+                View the Source
+              </a>
+            </div>
+          </section>
+
+          <section class="proj-sec">
+            <h2 class="inner__sub-header">PondDipping</h2>
+            <p class="inner_text">
+              Interactive browser game which quizzes players’ knowledge of
+              aquatic ecosystems.
+            </p>
+            <p class="inner_text-2nd">
+              Built with p5.js, HTML5 Canvas & CSS3.
+            </p>
+            <div class="proj-link-div">
+              <a
+                href="https://sarahhouben.github.io/PondDipping/"
+                target="_blank"
+              >
+                <img
+                  class="portfolio-logo"
+                  src="/assets/icons/homepage-icon.svg"
+                  alt="Website Logo"
+                />
+                View the Project
+              </a>
+              <a
+                href="https://github.com/SarahHouben/PondDipping"
+                target="_blank"
+              >
+                <img
+                  class="portfolio-logo"
+                  src="/assets/icons/github-icon.svg"
+                  alt="Github Logo"
+                />
+                View the Source
+              </a>
+            </div>
+          </section>
         </div>
       </div>
 
@@ -186,15 +326,47 @@
 
             <div class="inner-skills-div">
               <p class="inner-skills-div-top">Current location:</p>
-              <p class="inner-skills-div-bottom">Berlin</p>
+              <p class="inner-skills-div-bottom">Berlin, DE</p>
             </div>
           </div>
 
-          <img
-            class="portrait-img"
-            src="/assets/Sarah_Houben.jpg"
-            alt="Sarah Houben portrait"
-          />
+          <div class="portrait-div">
+            <img
+              class="portrait-img"
+              src="/assets/Sarah_Houben.jpg"
+              alt="Sarah Houben portrait"
+            />
+            <div>
+              <a href="/assets/Sarah_Houben_CV.pdf" target="_blank">
+                <img
+                  class="portfolio-logo"
+                  src="/assets/icons/download-icon.svg"
+                  alt="Download Icon"
+                />
+                View my CV
+              </a>
+              <a
+                class="github-logo"
+                href="https://github.com/SarahHouben"
+                target="_blank"
+              >
+                <img
+                  class="portfolio-logo"
+                  src="/assets/icons/github-icon.svg"
+                  alt="Github Logo"
+                />
+                Visit my GitHub
+              </a>
+              <a href="#" target="_blank">
+                <img
+                  class="portfolio-logo"
+                  src="/assets/icons/email-icon.svg"
+                  alt="Email Logo"
+                />
+                Get in touch
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
