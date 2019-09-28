@@ -86,44 +86,52 @@
 
   <body>
     <div class="container">
-      <div class="box box--side contact-box">
+      <div class="box box--side contact-box box--inactive">
         <h1 class="box__header">Contact</h1>
         <div class="box__inner">
           <h1 class="inner__header">Contact</h1>
 
-          <div class="form-div">
-          <form
-            action="https://formspree.io/mail@sarahhouben.com"
-            method="POST"
-            class="flex-col"
-          >
-            <label for="email">Email</label>
-            <input
-              class="form-input"
-              type="text"
-              name="email"
-              id=""
-              placeholder="abc@email.com"
-            />
-            <label for="message">Your message</label>
-            <textarea
-              class="form-input"
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="Your message"
-            ></textarea>
-            <div class="submit-div">
+          <div class="form-div" id="form-div">
+            <form
+              action="https://formspree.io/mail@sarahhouben.com"
+              method="POST"
+              class="flex-col"
+            >
               <input
-                class="submit-input"
-                id="contact-submit"
-                type="submit"
-                value="Submit"
+                type="hidden"
+                name="_next"
+                value="http://sarahhouben.dev"
               />
-            </div>
-          </form>
-        </div>
+              <label for="email">Email</label>
+              <input
+                class="form-input"
+                type="text"
+                name="email"
+                id=""
+                placeholder="abc@email.com"
+              />
+              <label for="message">Your message</label>
+              <textarea
+                class="form-input"
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Your message"
+              ></textarea>
+              <div class="submit-div">
+                <input
+                  class="submit-input"
+                  id="contact-submit"
+                  type="submit"
+                  value="Submit"
+                />
+              </div>
+            </form>
+            <!-- <p class="email-confirmation">
+              Thanks for your email! I'll be in touch soon.
+            </p> -->
+          </div>
 
           <a href="https://www.linkedin.com/in/sarahhouben/" target="_blank">
             <img
@@ -133,11 +141,10 @@
             />
             Or connect with me on LinkedIn
           </a>
-    
         </div>
       </div>
 
-      <div class="box box--side portfolio-box">
+      <div class="box box--side portfolio-box box--inactive">
         <h1 class="box__header">Portfolio</h1>
         <div class="box__inner">
           <h1 class="inner__header">Portfolio</h1>
@@ -242,7 +249,7 @@
         </div>
       </div>
 
-      <div class="box box--side about-box">
+      <div class="box box--side about-box box--inactive">
         <h1 class="box__header">About</h1>
 
         <div class="box__inner">
@@ -357,7 +364,7 @@
                 />
                 Visit my GitHub
               </a>
-              <a href="#" target="_blank">
+              <a href="#form-div">
                 <img
                   class="portfolio-logo"
                   src="/assets/icons/email-icon.svg"
@@ -370,7 +377,7 @@
         </div>
       </div>
 
-      <div class="box logo-box">
+      <div class="box logo-box box--inactive">
         <div class="logo-div">
           <img
             class="logo-png"
