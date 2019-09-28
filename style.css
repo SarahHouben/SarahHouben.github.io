@@ -70,11 +70,11 @@ h1 {
   text-orientation: upright;
 
   color: black;
+  background-color: RGBA(240, 227, 230, 0.8);
 
-  /* background-image: none; */
-  /* background-color: RGBA(197, 197, 206, 0.5); */
-  background-color: #f0e3e6;
-  background-color: RGBA(240, 227, 230, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .box__inner--enter {
@@ -94,8 +94,8 @@ h1 {
 }
 
 .box-header--active {
-  transition-delay: 0.9s;
   opacity: 0;
+  transition: opacity 0.9s ease;
 }
 
 /* #################################            INDIVIDUAL BOXES           ############################################*/
@@ -155,6 +155,95 @@ h1 {
   text-orientation: upright;
   text-align: center;
   margin-top: -10px;
+}
+
+/* #################################            INSIDE OF BOXES           ############################################*/
+
+.inner__header {
+  font-family: "Cutive Mono", monospace;
+  text-align: center;
+  font-weight: 300;
+  color: #111010;
+  font-size: 1.3rem;
+  /* padding-bottom: 1em; */
+  padding-top: 1em;
+}
+
+.inner_text {
+  padding: 1em 20px 0 20px;
+  text-align: justify;
+}
+
+/* #################################            ABOUT INNER BOX           ############################################*/
+
+.skills-div {
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  width: 100%;
+}
+
+.skills-div p {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+li {
+  font-size: 0.8rem;
+  padding-top: 5px;
+}
+.outer-list {
+  /* padding-left: 10px; */
+  list-style: none;
+}
+
+.inner-list {
+  list-style: disc inside;
+  padding-left: 5px;
+}
+
+.inner-list li {
+  padding-top: 0;
+}
+
+.skill-list-right li {
+  padding-top: 0;
+}
+
+.skill-list-right-top {
+  margin-top: 5px;
+}
+
+.inner-skills-div {
+  display: flex;
+  align-items: center;
+}
+
+.skills-div-bottom {
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  width: 100%;
+}
+
+.inner-skills-div-top {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding-right: 7px;
+}
+
+.inner-skills-div-bottom {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.portrait-img {
+  height: 24vh;
+  width: auto;
+  border-radius: 50%;
+  max-width: 280px;
 }
 
 /*Responsive design for different media*/
