@@ -6,58 +6,54 @@ document.addEventListener("DOMContentLoaded", ready);
 function ready() {
   let boxes = document.querySelectorAll(".box");
   let boxInners = document.querySelectorAll(".box__inner");
+
+  function removeActiveClasses(box) {
+    let boxInner = box.querySelector(".box__inner");
+    if (boxInner) {
+      // add width to prevent content squishing,
+      // this width is only removed later once we add the active class again,
+      // so that we don't have to deal with transitionend events or set a timeout
+      boxInner.style.width = box.clientWidth + "px";
+      boxInner.classList.remove("box__inner--enter");
+    }
+
+    box.classList.remove("box--active");
+    box.classList.add("box--inactive");
+
+    let boxHeader = box.querySelector(".box__header");
+    if (boxHeader) boxHeader.classList.remove("box-header--active");
+  }
+
+  function addActiveClasses(box) {
+    box.classList.add("box--active");
+    box.classList.remove("box--inactive");
+
+    let boxHeader = box.querySelector(".box__header");
+    if (boxHeader) boxHeader.classList.add("box-header--active");
+
+    let boxInner = box.querySelector(".box__inner");
+    if (boxInner) {
+      // remove width so that boxInner now takes up the width of the parent div (.box)
+      boxInner.style.width = "";
+      boxInner.classList.add("box__inner--enter");
+    }
+  }
+
   boxes.forEach(box => {
     box.addEventListener("click", function(event) {
-      function removeActiveClasses(box) {
-        let boxInner = box.querySelector(".box__inner");
-        if (boxInner) {
-          boxInner.classList.remove("box__inner--enter");
-          boxInner.style.width = boxInner.clientWidth + "px";
-        }
-
-        // set timeout to add the code below to end of event queue ( fixes boxInner width not being set before .box--active being added)
-        this.setTimeout(() => {
-          box.classList.remove("box--active");
-          box.classList.add("box--inactive");
-
-          // wait for transition of .box--active to end before we remove the width of the boxInner
-          // prevents the visible squishing of the content when it closes :)
-          box.addEventListener("transitionend", function() {
-            if (boxInner) boxInner.style.width = "";
-          });
-        });
-
-        let boxHeader = box.querySelector(".box__header");
-        if (boxHeader) boxHeader.classList.remove("box-header--active");
-      }
-
-      function addActiveClasses(box) {
-        box.classList.add("box--active");
-        box.classList.remove("box--inactive");
-
-        let boxHeader = box.querySelector(".box__header");
-        if (boxHeader) boxHeader.classList.add("box-header--active");
-
-        let boxInner = box.querySelector(".box__inner");
-        if (boxInner) boxInner.classList.add("box__inner--enter");
-      }
-
-      // let activeBox;
+      let activeBox;
       // reset state by removing all active classes
       boxes.forEach(_box => {
         if (_box.classList.contains("box--active")) {
           removeActiveClasses(_box);
           // save the current active box for later..
-          // activeBox = _box;
+          activeBox = _box;
         }
       });
 
-      // if clicking on a currently active box, close it ( doesn't work with current implementation )
-      // if (activeBox === box) {
-      //   removeActiveClasses(box);
-      // } else {
-      //   addActiveClasses(box);
-      // }
+      if (activeBox !== box) {
+        addActiveClasses(box);
+      }
     });
   });
 
@@ -70,4 +66,52 @@ function ready() {
       event.stopPropagation();
     });
   });
+
+  /* #################################         HYPERLINK TO CONTACT     FUNCTIONS         ############################################*/
+
+  let contactLink = document.querySelector(".contact-link");
+  contactLink.addEventListener("click", function() {
+    let contactBox = document.querySelector(".contact-box");
+    let aboutBox = document.querySelector(".about-box");
+    addActiveClasses(contactBox);
+    removeActiveClasses(aboutBox);
+  });
 }
+
+/* #################################         HYPERLINK TO CONTACT     FUNCTIONS         ############################################*/
+
+// let contactLink = document.querySelector(".contact-link");
+// contactLink.addEventListener("click", function() {
+//   //   //CONTACT BOX
+//   //   //Open Contact-Box
+//   let contactBox = document.querySelector(".contact-box");
+//   let aboutBox = document.querySelector(".about-box");
+//   addActiveClasses(contactBox);
+//   removeActiveClasses(aboutBox);
+
+//   contactBox.classList.add("box--active");
+//   contactBox.classList.remove("box--inactive");
+
+//   //Add Header to Contact-Box
+// let contactHeader = document.querySelector(".about__header");
+//   contactHeader.classList.remove("box-header--active");
+
+//   //Open Inner Contact-Box
+//   let innerContactBox = document.querySelector(".inner__contact-box");
+//   innerContactBox.classList.add("box__inner--enter");
+//   innerContactBox.style.width = "";
+
+//   //ABOUT BOX
+//   //Close About Box
+//   aboutBox.classList.remove("box--active");
+//   aboutBox.classList.add("box--inactive");
+
+//   //Remove Header from About-Box
+//   let aboutHeader = document.querySelector(".contact__header");
+//   aboutHeader.classList.add("box-header--active");
+
+//   //Close Inner About-Box
+//   let innerAboutBox = document.querySelector(".inner__about-box");
+//   innerAboutBox.classList.remove("box__inner--enter");
+//   innerAboutBox.style.width = aboutBox.clientWidth + "px";
+// });
