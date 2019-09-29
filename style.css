@@ -206,7 +206,7 @@ a:hover {
 /* #################################            ABOUT INNER BOX           ############################################*/
 
 .skills-div {
-  padding-top: 1em;
+  padding: 1em 20px 0 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: baseline;
@@ -272,8 +272,9 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding-bottom: 20px;
+  padding: 0 20px 20px 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .portrait-img {
@@ -306,7 +307,7 @@ li {
 }
 
 .portfolio-logo {
-  height: 25px;
+  height: 28px;
   width: auto;
   padding-right: 5px;
 }
