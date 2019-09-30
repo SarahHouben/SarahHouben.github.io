@@ -16,18 +16,23 @@ function ready() {
       boxInner.style.width = box.clientWidth + "px";
       boxInner.classList.remove("box__inner--enter");
     }
-
+    //Close previously open inner box (flex: 1)
     box.classList.remove("box--active");
+    //Show previously open inner box (now closed) clickable again (cursor: pointer)
     box.classList.add("box--inactive");
 
+    //Let Header on outer Box be visible on previously open box
     let boxHeader = box.querySelector(".box__header");
     if (boxHeader) boxHeader.classList.remove("box-header--active");
   }
 
   function addActiveClasses(box) {
+    //Open newly clicked inner box (flex: 8)
     box.classList.add("box--active");
+    //Show now open inner box (now closed) is no longer clickable  (cursor: default)
     box.classList.remove("box--inactive");
 
+    //Remove Header from newly clicked (now opening) box (header opacity: 0)
     let boxHeader = box.querySelector(".box__header");
     if (boxHeader) boxHeader.classList.add("box-header--active");
 
@@ -40,18 +45,20 @@ function ready() {
   }
 
   boxes.forEach(box => {
+    //listen for click event on box
     box.addEventListener("click", function(event) {
       let activeBox;
       // reset state by removing all active classes
       boxes.forEach(_box => {
         if (_box.classList.contains("box--active")) {
           removeActiveClasses(_box);
-          // save the current active box for later..
+          // save the current active box for later
           activeBox = _box;
         }
       });
 
       if (activeBox !== box) {
+        //open clicked box
         addActiveClasses(box);
       }
     });
@@ -67,51 +74,15 @@ function ready() {
     });
   });
 
-  /* #################################         HYPERLINK TO CONTACT     FUNCTIONS         ############################################*/
+  /* #################################     Functionality of Link in "About box"  which opens "Contact box"     ############################################*/
 
   let contactLink = document.querySelector(".contact-link");
   contactLink.addEventListener("click", function() {
     let contactBox = document.querySelector(".contact-box");
     let aboutBox = document.querySelector(".about-box");
+    //open contact box
     addActiveClasses(contactBox);
+    //close about box
     removeActiveClasses(aboutBox);
   });
 }
-
-/* #################################         HYPERLINK TO CONTACT     FUNCTIONS         ############################################*/
-
-// let contactLink = document.querySelector(".contact-link");
-// contactLink.addEventListener("click", function() {
-//   //   //CONTACT BOX
-//   //   //Open Contact-Box
-//   let contactBox = document.querySelector(".contact-box");
-//   let aboutBox = document.querySelector(".about-box");
-//   addActiveClasses(contactBox);
-//   removeActiveClasses(aboutBox);
-
-//   contactBox.classList.add("box--active");
-//   contactBox.classList.remove("box--inactive");
-
-//   //Add Header to Contact-Box
-// let contactHeader = document.querySelector(".about__header");
-//   contactHeader.classList.remove("box-header--active");
-
-//   //Open Inner Contact-Box
-//   let innerContactBox = document.querySelector(".inner__contact-box");
-//   innerContactBox.classList.add("box__inner--enter");
-//   innerContactBox.style.width = "";
-
-//   //ABOUT BOX
-//   //Close About Box
-//   aboutBox.classList.remove("box--active");
-//   aboutBox.classList.add("box--inactive");
-
-//   //Remove Header from About-Box
-//   let aboutHeader = document.querySelector(".contact__header");
-//   aboutHeader.classList.add("box-header--active");
-
-//   //Close Inner About-Box
-//   let innerAboutBox = document.querySelector(".inner__about-box");
-//   innerAboutBox.classList.remove("box__inner--enter");
-//   innerAboutBox.style.width = aboutBox.clientWidth + "px";
-// });

@@ -15,11 +15,10 @@ h1 {
 
 h2 {
   font-size: 0.9rem;
-  font-family: "Cutive Mono", monospace;
   text-align: center;
-  font-weight: 300;
+  font-weight: 700;
   color: #111010;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-top: 1em;
 }
 
@@ -110,6 +109,7 @@ a:hover {
 
 .box--active {
   flex: 8;
+  cursor: default;
 }
 
 .box--inactive {
@@ -167,6 +167,7 @@ a:hover {
 .logo-box {
   background-color: black;
   flex: 8;
+  cursor: pointer;
 }
 
 .logo-div {
@@ -290,20 +291,40 @@ li {
 
 /* #################################            PORTFOLIO INNER BOX           ############################################*/
 
-.proj-sec {
-  padding-top: 1rem;
-}
-
-.proj-link-div {
+.project-box {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding-top: 1em;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1em 0 2em 0;
+}
+.proj-sec {
+  margin: 1rem 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px RGBA(17, 16, 16, 0.4);
 }
 
-.inner_text-2nd {
-  padding: 0.4em 20px 0 20px;
-  text-align: center;
+.inner__sub-header {
+  padding: 5px 20px 0 20px;
+  text-align: left;
+}
+
+.proj-info-div {
+  display: flex;
+}
+
+.proj-info-inner {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  width: 50%;
+}
+
+.proj-info-div a {
+  padding: 20px 20px 5px 20px;
 }
 
 .portfolio-logo {
@@ -326,7 +347,11 @@ li {
 
 .form-input {
   background-color: rgba(255, 255, 255, 0.5);
-  border: solid 1px #d1d1d1;
+  /* border: solid 1px #d1d1d1; */
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
   border-radius: 4px;
   font-family: "Lato", sans-serif;
   font-size: 0.9rem;
@@ -370,18 +395,6 @@ label {
   color: #2e2e2e;
   border: solid 1px #2e2e2e;
 }
-/* 
-.email-confirmation {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.email-confirmation--active {
-  text-align: center;
-  padding-top: 5px;
-  transition-delay: 1s;
-  opacity: 1;
-} */
 
 /*Responsive design for different media*/
 /* these would be measurements for smartphones*/

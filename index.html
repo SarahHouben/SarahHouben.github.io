@@ -87,8 +87,8 @@
   <body>
     <div class="container">
       <div class="box box--side contact-box box--inactive">
-        <h1 class="box__header contact__header">Contact</h1>
-        <div class="box__inner inner__contact-box">
+        <h1 class="box__header">Contact</h1>
+        <div class="box__inner">
           <h1 class="inner__header">Contact</h1>
 
           <div class="form-div" id="form-div">
@@ -97,11 +97,6 @@
               method="POST"
               class="flex-col"
             >
-              <input
-                type="hidden"
-                name="_next"
-                value="http://sarahhouben.dev"
-              />
               <label for="email">Email</label>
               <input
                 class="form-input"
@@ -128,9 +123,6 @@
                 />
               </div>
             </form>
-            <!-- <p class="email-confirmation">
-              Thanks for your email! I'll be in touch soon.
-            </p> -->
           </div>
 
           <a href="https://www.linkedin.com/in/sarahhouben/" target="_blank">
@@ -149,110 +141,130 @@
         <div class="box__inner">
           <h1 class="inner__header">Portfolio</h1>
 
-          <section class="proj-sec">
-            <h2 class="inner__sub-header">Restaurant App</h2>
-            <p class="inner_text">
-              Web app which allows users to explore & pin “green spaces” in
-              their local area.
-            </p>
-            <p class="inner_text-2nd">
-              Built with Node.js, Express.js, Passport.js, MongoDB, Mongoose
-              ODM, Google Maps & SASS.
-            </p>
-            <div class="proj-link-div">
-              <a href="" target="_blank">
-                <img
-                  class="portfolio-logo"
-                  src="/assets/icons/greenspace-icon.png"
-                  alt="Website Logo"
-                />
-                View the Project
-              </a>
-              <a href="" target="_blank">
-                <img
-                  class="portfolio-logo"
-                  src="/assets/icons/github-icon.svg"
-                  alt="Github Logo"
-                />
-                View the Source
-              </a>
-            </div>
-          </section>
+          <div class="project-box">
+            <section class="proj-sec top-proj">
+              <h2 class="inner__sub-header">Restaurant App</h2>
+              <div class="proj-info-div">
+                <div class="proj-info-inner">
+                  <p class="inner_text">
+                    Web app which allows users to explore & pin “green spaces”
+                    in their local area.
+                  </p>
+                  <a href="" target="_blank">
+                    <img
+                      class="portfolio-logo"
+                      src="/assets/icons/greenspace-icon.png"
+                      alt="Website Logo"
+                    />
+                    View the Project
+                  </a>
+                </div>
 
-          <section class="proj-sec">
-            <h2 class="inner__sub-header">GreenSpace Berlin</h2>
-            <p class="inner_text">
-              Web app which allows users to explore & pin “green spaces” in
-              their local area.
-            </p>
-            <p class="inner_text-2nd">
-              Built with Node.js, Express.js, Passport.js, MongoDB, Mongoose
-              ODM, Google Maps & SASS.
-            </p>
-            <div class="proj-link-div">
-              <a href="https://greenspaceberlin.herokuapp.com/" target="_blank">
-                <img
-                  class="portfolio-logo"
-                  src="/assets/icons/greenspace-icon.png"
-                  alt="Website Logo"
-                />
-                View the Project
-              </a>
-              <a
-                href="https://github.com/SarahHouben/GreenSpace"
-                target="_blank"
-              >
-                <img
-                  class="portfolio-logo"
-                  src="/assets/icons/github-icon.svg"
-                  alt="Github Logo"
-                />
-                View the Source
-              </a>
-            </div>
-          </section>
+                <div class="proj-info-inner">
+                  <p class="inner_text">
+                    Built with Node.js, Express.js, Passport.js, MongoDB,
+                    Mongoose ODM, Google Maps & SASS.
+                  </p>
+                  <a href="" target="_blank">
+                    <img
+                      class="portfolio-logo"
+                      src="/assets/icons/github-icon.svg"
+                      alt="Github Logo"
+                    />
+                    View the Source
+                  </a>
+                </div>
+              </div>
+            </section>
 
-          <section class="proj-sec">
-            <h2 class="inner__sub-header">PondDipping</h2>
-            <p class="inner_text">
-              Interactive browser game which quizzes players’ knowledge of
-              aquatic ecosystems.
-            </p>
-            <p class="inner_text-2nd">
-              Built with p5.js, HTML5 Canvas & CSS3.
-            </p>
-            <div class="proj-link-div">
-              <a
-                href="https://sarahhouben.github.io/PondDipping/"
-                target="_blank"
-              >
-                <img
-                  class="portfolio-logo"
-                  src="/assets/icons/ponddipping_icon.png"
-                  alt="Website Logo"
-                />
-                View the Project
-              </a>
-              <a
-                href="https://github.com/SarahHouben/PondDipping"
-                target="_blank"
-              >
-                <img
-                  class="portfolio-logo"
-                  src="/assets/icons/github-icon.svg"
-                  alt="Github Logo"
-                />
-                View the Source
-              </a>
-            </div>
-          </section>
+            <section class="proj-sec">
+              <h2 class="inner__sub-header">GreenSpace Berlin</h2>
+              <div class="proj-info-div">
+                <div class="proj-info-inner">
+                  <p class="inner_text">
+                    Web app which allows users to explore & pin “green spaces”
+                    in their local area.
+                  </p>
+                  <a
+                    href="https://greenspaceberlin.herokuapp.com/"
+                    target="_blank"
+                  >
+                    <img
+                      class="portfolio-logo"
+                      src="/assets/icons/greenspace-icon.png"
+                      alt="GreenSpace Logo"
+                    />
+                    View the Project
+                  </a>
+                </div>
+
+                <div class="proj-info-inner">
+                  <p class="inner_text">
+                    Built with Node.js, Express.js, Passport.js, Mongoose ODM,
+                    MongoDB, Google Maps & SASS.
+                  </p>
+                  <a
+                    href="https://github.com/SarahHouben/GreenSpace"
+                    target="_blank"
+                  >
+                    <img
+                      class="portfolio-logo"
+                      src="/assets/icons/github-icon.svg"
+                      alt="Github Logo"
+                    />
+                    View the Source
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <section class="proj-sec">
+              <h2 class="inner__sub-header">PondDipping</h2>
+              <div class="proj-info-div">
+                <div class="proj-info-inner">
+                  <p class="inner_text">
+                    Interactive browser game which quizzes players’ knowledge of
+                    aquatic ecosystems.
+                  </p>
+                  <a
+                    href="https://sarahhouben.github.io/PondDipping/"
+                    target="_blank"
+                  >
+                    <img
+                      class="portfolio-logo"
+                      src="/assets/icons/ponddipping_icon.png"
+                      alt="PondDipping Logo"
+                    />
+                    View the Project
+                  </a>
+                </div>
+
+                <div class="proj-info-inner">
+                  <p class="inner_text">
+                    Built with p5.js, HTML5 Canvas & CSS3.
+                  </p>
+                  <a
+                    href="https://sarahhouben.github.io/PondDipping/"
+                    target="_blank"
+                  >
+                    <img
+                      class="portfolio-logo"
+                      src="/assets/icons/github-icon.svg"
+                      alt="Github Logo"
+                    />
+                    View the Source
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
 
       <div class="box box--side about-box box--inactive">
-        <h1 class="box__header about__header">About</h1>
+        <h1 class="box__header">About</h1>
 
-        <div class="box__inner inner__about-box">
+        <div class="box__inner">
           <h1 class="inner__header">About</h1>
           <p class="inner_text">
             Hi there, my name is Sarah and after studying biology, I decided to
