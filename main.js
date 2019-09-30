@@ -45,20 +45,28 @@ function ready() {
   }
 
   boxes.forEach(box => {
-    //listen for click event on box
+    //listen for click event on box ("box" is the clicked boc)
     box.addEventListener("click", function(event) {
       let activeBox;
       // reset state by removing all active classes
+      //"_box" is the current value box
       boxes.forEach(_box => {
+        //Rule for logo box -->  If logo box is active and clicked again, do not change from active to inactive class
+        if (
+          box.classList.contains("logo-box") &&
+          box.classList.contains("box--active")
+        )
+          return;
+
         if (_box.classList.contains("box--active")) {
           removeActiveClasses(_box);
-          // save the current active box for later
+          // save the current active box for later (see below)
           activeBox = _box;
         }
       });
 
-      if (activeBox !== box) {
-        //open clicked box
+      if (box !== activeBox) {
+        //if clicked box is not the already active box, give it active class and open the  clicked box
         addActiveClasses(box);
       }
     });
