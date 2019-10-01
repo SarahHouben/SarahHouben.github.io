@@ -4,6 +4,30 @@
 document.addEventListener("DOMContentLoaded", ready);
 
 function ready() {
+  // ##### Loading function -> fake heavy content on site for 3 s for loading screen
+  let body = document.body;
+  // let loaded = () => {
+  //   body.classList.add("loaded");
+  // };
+
+  function loaded() {
+    body.classList.add("loaded");
+  }
+
+  // setTimeout(loaded, 600);
+
+  var img = document.querySelector(".portrait-img");
+  if (img.complete) {
+    loaded();
+  } else {
+    img.addEventListener("load", loaded);
+    img.addEventListener("error", function() {
+      alert("error");
+    });
+  }
+
+  // ##### Box functions
+
   let boxes = document.querySelectorAll(".box");
   let boxInners = document.querySelectorAll(".box__inner");
 
