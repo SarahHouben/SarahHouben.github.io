@@ -187,6 +187,21 @@ a:hover {
   margin-top: -10px;
 }
 
+.logo-div-info {
+  display: inline-block;
+  font-size: 10px;
+  color: rgba(209, 209, 209, 0.4);
+  text-orientation: upright;
+  writing-mode: horizontal-tb;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+
+.logo-div-info span {
+  font-size: 10px;
+}
+
 /* #################################            INSIDE OF BOXES           ############################################*/
 
 .inner__header {
