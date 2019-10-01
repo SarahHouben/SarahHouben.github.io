@@ -167,7 +167,6 @@ a:hover {
 .logo-box {
   background-color: black;
   flex: 8;
-  /* cursor: pointer; */
 }
 
 .logo-div {
@@ -348,10 +347,6 @@ li {
 .form-input {
   background-color: rgba(255, 255, 255, 0.5);
   border: solid 1px #d1d1d1;
-  /* border-width: 2px;
-  border-style: inset;
-  border-color: initial;
-  border-image: initial; */
   border-radius: 4px;
   font-family: "Lato", sans-serif;
   font-size: 0.9rem;
@@ -396,11 +391,57 @@ label {
   border: solid 1px #2e2e2e;
 }
 
+.linkedin-contact {
+  padding-bottom: 20px;
+}
+
+/* #################################            RESPONSIVE DESIGN           ############################################*/
+
 /*Responsive design for different media*/
+
+/* these would be measurements for smartphones*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column-reverse;
+    height: 100vh;
+  }
+
+  .about-box {
+    background-image: linear-gradient(
+        to bottom,
+        RGBA(255, 106, 136, 0.1),
+        RGBA(255, 153, 172, 0.1)
+      ),
+      url("/assets/Peak_District_National_Park_UK.jpg");
+  }
+
+  .portfolio-box {
+    background-image: linear-gradient(
+        to bottom,
+        RGBA(255, 106, 136, 0.1),
+        RGBA(255, 153, 172, 0.1)
+      ),
+      url("/assets/Antelope_Canyon.jpg");
+  }
+
+  .contact-box {
+    background-image: linear-gradient(
+        to bottom,
+        RGBA(255, 106, 136, 0.1),
+        RGBA(255, 153, 172, 0.1)
+      ),
+      url("/assets/Lakedistrict\,\ UK.jpg");
+  }
+
+  .logo-box {
+    flex: 6;
+  }
+}
+
 /* these would be measurements for smartphones*/
 @media (min-width: 320px) and (max-width: 480px) {
   .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: 100vh;
   }
 }
