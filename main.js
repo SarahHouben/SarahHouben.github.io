@@ -1,20 +1,12 @@
-/* #################################            BOX  FUNCTIONS         ############################################*/
-
 // wait for html to load in browser before executing javascript code
 document.addEventListener("DOMContentLoaded", ready);
 
 function ready() {
-  // ##### Loading function -> fake heavy content on site for 3 s for loading screen
+  // ##### Loading function -> fades out loading screen once portrait photo is loaded (largest image used in website)
   let body = document.body;
-  // let loaded = () => {
-  //   body.classList.add("loaded");
-  // };
-
   function loaded() {
     body.classList.add("loaded");
   }
-
-  // setTimeout(loaded, 600);
 
   var img = document.querySelector(".portrait-img");
   if (img.complete) {
@@ -26,7 +18,7 @@ function ready() {
     });
   }
 
-  // ##### Box functions
+  /* #################################            BOX  FUNCTIONS         ############################################*/
 
   let boxes = document.querySelectorAll(".box");
   let boxInners = document.querySelectorAll(".box__inner");
@@ -108,12 +100,27 @@ function ready() {
 
   /* #################################     Functionality of Link in "About box"  which opens "Contact box"     ############################################*/
 
-  let contactLink = document.querySelector(".contact-link");
-  contactLink.addEventListener("click", function() {
-    let contactBox = document.querySelector(".contact-box");
+  let contactLinks = document.querySelectorAll(".contact-link");
+  contactLinks.forEach(contactLink => {
+    contactLink.addEventListener("click", function() {
+      let contactBox = document.querySelector(".contact-box");
+      let aboutBox = document.querySelector(".about-box");
+      //open contact box
+      addActiveClasses(contactBox);
+      //close about box
+      removeActiveClasses(aboutBox);
+    });
+  });
+
+  /* #################################     Functionality of Link in "About box"  which opens "Contact box"     ############################################*/
+
+  let projectLink = document.querySelector(".project-link");
+
+  projectLink.addEventListener("click", function() {
+    let projectBox = document.querySelector(".portfolio-box");
     let aboutBox = document.querySelector(".about-box");
-    //open contact box
-    addActiveClasses(contactBox);
+    //open project box
+    addActiveClasses(projectBox);
     //close about box
     removeActiveClasses(aboutBox);
   });
